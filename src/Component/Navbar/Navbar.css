@@ -1,0 +1,115 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideIn 0.5s ease-out;
+  width: calc(100% - 50px);
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.8); /* Light grey with transparency */
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav img.logo {
+  height: 130px;
+  width: auto;
+  will-change: filter;
+  transition: filter 300ms;
+  object-fit: contain;
+}
+
+nav img.logo:hover {
+  filter: drop-shadow(0 0 2em #ff0c39);
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul.center {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+nav ul.right {
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li.signup {
+  margin-left: 0;
+}
+
+nav ul li a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #e3111b;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #eb0d32;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li button {
+  background: none;
+  border: 1px solid #395067;
+  border-radius: 4px;
+  padding: 12px 15px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li button:hover {
+  background-color: #f90d2c;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

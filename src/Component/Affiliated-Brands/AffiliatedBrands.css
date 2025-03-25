@@ -1,0 +1,84 @@
+.affiliated-brands {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.affiliated-brands-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.affiliated-brands h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-slide {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  animation: slide 20s linear infinite;
+}
+
+.logo-slide img {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-slide img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 968px) {
+  .affiliated-brands h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .logo-slide img {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .affiliated-brands {
+    padding: 40px 15px;
+  }
+
+  .affiliated-brands h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .logo-slide img {
+    width: 80px;
+    height: 60px;
+  }
+}

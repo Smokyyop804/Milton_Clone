@@ -1,0 +1,142 @@
+.product-details-container {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.product-image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.product-detail-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.product-detail-image:hover {
+  transform: scale(1.05);
+}
+
+.product-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-info-section h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features-section,
+.specifications-section {
+  margin-bottom: 30px;
+}
+
+.features-section h2,
+.specifications-section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.features-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-section li {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.features-section li::before {
+  content: "✓";
+  color: #f90d2c;
+  position: absolute;
+  left: 0;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.spec-item {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.spec-label {
+  color: #666;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.spec-value {
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 968px) {
+  .product-details-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .product-image-section {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details-content {
+    padding: 20px;
+  }
+
+  .product-info-section h1 {
+    font-size: 2rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
